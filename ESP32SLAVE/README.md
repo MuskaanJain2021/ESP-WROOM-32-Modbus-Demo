@@ -82,7 +82,6 @@ If you still experience WDT resets:
 UART_02/
 ├── main/
 │   ├── uart_async_rxtxtasks_main.c  # Main application code
-│   ├── 
 │   └── CMakeLists.txt               # Component build configuration
 ├── CMakeLists.txt                   # Project build configuration
 ├── sdkconfig                        # Project configuration
