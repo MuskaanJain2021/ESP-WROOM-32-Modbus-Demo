@@ -1,4 +1,4 @@
-# ESP32MASTER - ESP32 UART Communication Project
+# ESP32SLAVE
 
 This project demonstrates  Slave asynchronous UART communication on ESP32 with separate RX and TX tasks.
 
