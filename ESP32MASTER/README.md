@@ -1,11 +1,10 @@
-# UART_02 - ESP32 UART Communication Project
+# ESP32MASTER
 
-This project demonstrates asynchronous UART communication on ESP32 with separate RX and TX tasks, including LED control functionality.
+This project demonstrates Master asynchronous UART communication on ESP32 with separate RX and TX tasks.
 
 ## Features
 
 - **Asynchronous UART Communication**: Separate tasks for receiving and transmitting data
-- **LED Control**: Control onboard LED via UART commands
 - **Watchdog Timer Protection**: Proper task scheduling to prevent WDT resets
 - **Flexible Command Processing**: String-based command recognition
 
@@ -13,20 +12,14 @@ This project demonstrates asynchronous UART communication on ESP32 with separate
 
 - ESP32 development board
 - USB-to-UART converter (for testing)
-- LED connected to GPIO 7 (or onboard LED)
+
 
 ## Pin Configuration
 
 - **UART TX**: GPIO 4
 - **UART RX**: GPIO 5  
-- **LED**: GPIO 7
 
-## UART Commands
 
-The system responds to the following commands via UART:
-
-- `LED ON` - Turn LED on
-- `LED OFF` - Turn LED off
 
 ## Recent Fixes Applied
 
@@ -90,8 +83,6 @@ If you still experience WDT resets:
 UART_02/
 ├── main/
 │   ├── uart_async_rxtxtasks_main.c  # Main application code
-│   ├── LED.c                        # LED control functions
-│   ├── LED.h                        # LED header file
 │   └── CMakeLists.txt               # Component build configuration
 ├── CMakeLists.txt                   # Project build configuration
 ├── sdkconfig                        # Project configuration
