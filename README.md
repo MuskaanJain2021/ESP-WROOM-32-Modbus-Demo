@@ -12,7 +12,6 @@ This repository demonstrates Modbus RTU communication between two ESP-WROOM-32 (
 - **Example holding registers** for demonstration
 - **Robust CRC16 calculation** for Modbus frame integrity ([CRC16 calculator](https://www.crccalc.com/?crc=123456789&method=modbus&datatype=hex&outtype=hex))
 - **Detailed logging** for debugging and learning
-- **LED control** (GPIO) for visual feedback
 
 ## Project Structure
 
@@ -21,13 +20,10 @@ MODBUS/
   ├── ESP32MASTER/      # Master device code
   │   └── main/
   │       ├── uart_async_rxtxtasks_main.c
-  │       ├── LED.c
-  │       └── LED.h
   └── ESP32SLAVE/       # Slave device code
       └── main/
           ├── uart_async_rxtxtasks_main.c
-          ├── LED.c
-          └── LED.h
+
 ```
 
 ## Getting Started
@@ -258,18 +254,6 @@ Main FreeRTOS task for the Modbus slave. Waits for incoming requests, processes 
 #### `void app_main(void)`
 **Description:**  
 ESP-IDF entry point. Configures UART, installs the driver, sets up pins, and starts the slave task.
-
----
-
-### LED Control (`LED.c` / `LED.h` in both master and slave)
-
-#### `void ledOnOFF(uint8_t state)`
-**Description:**  
-Sets the LED GPIO pin to the specified state (on/off).
-
-#### `void configure_led(void)`
-**Description:**  
-Configures the LED GPIO pin as output.
 
 ---
 
